@@ -1,3 +1,5 @@
+import { GlobalStyled } from '../Global-Styled';
+
 export const App = () => {
   return (
     <div
@@ -11,6 +13,7 @@ export const App = () => {
       }}
     >
       React homework template
+      <GlobalStyled />
     </div>
   );
 };
