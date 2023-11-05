@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { FeedbackCard } from './Feedback-styled';
+import { FeedbackCard, Headrest, ButtonsList } from './Feedback-styled';
 
 export class Feedback extends Component {
     state = {
@@ -44,14 +44,14 @@ export class Feedback extends Component {
         const { good, neutral, bad } = this.state
         return (
             <FeedbackCard>
-            <h2>Please Leave feedback</h2>
-            <div>
+            <Headrest>Please Leave feedback</Headrest>
+            <ButtonsList>
             <button onClick={this.updateGoodValue}>Good</button>
             <button onClick={this.updateNeutralValue}>Neutral</button>
             <button onClick={this.updateBadValue}>Bad</button>
-            </div>
+            </ButtonsList>
             <div>
-                <h2>Statistics</h2>
+                <Headrest>Statistics</Headrest>
                 <p>Good: {good}</p>
                 <p>Neutral: {neutral}</p>
                 <p>Bad: {bad}</p>
