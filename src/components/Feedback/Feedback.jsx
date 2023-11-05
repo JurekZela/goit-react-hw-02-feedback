@@ -38,10 +38,16 @@ export class Feedback extends Component {
         )
       }
 
-      
+      countTotalFeedback() {
+        };
+
+      countPositiveFeedbackPercentage() {
+      }
 
       render() {
         const { good, neutral, bad } = this.state
+        const total = good + neutral + bad;
+
         return (
             <FeedbackCard>
             <Headrest>Please Leave feedback</Headrest>
@@ -55,6 +61,11 @@ export class Feedback extends Component {
                 <p>Good: {good}</p>
                 <p>Neutral: {neutral}</p>
                 <p>Bad: {bad}</p>
+                { total > 0 && <>
+                  <p>Total: {total}</p> 
+                <p>Positive Feedback: %</p>
+                </>
+                }
             </div>
             </FeedbackCard>
         );
