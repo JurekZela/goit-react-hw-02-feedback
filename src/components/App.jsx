@@ -1,7 +1,8 @@
 import { Component } from 'react';
-import { FeedbackCard, Headrest } from './Feedback/Feedback-styled';
+import { FeedbackCard } from './Feedback/Feedback-styled';
 import { Statistics } from './Statistics/Statistics';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
+import { Section } from './Section/Section';
 
 export class App extends Component{
   state = {
@@ -34,42 +35,15 @@ export class App extends Component{
 
     return (
         <FeedbackCard>
-        <Headrest>Please Leave feedback</Headrest>
-        <FeedbackOptions
+         <Section title="Please leave feedback">
+         <FeedbackOptions
          options={Object.keys(this.state)}
-         onLeaveFeedback={this.onLeaveFeedback} />
-        <Statistics good={good} neutral={neutral} bad={bad} total={total} positivePercentage={this.countPositiveFeedbackPercentage()} />
+         onLeaveFeedback={this.onLeaveFeedback}></FeedbackOptions>
+         </Section>
+        <Section title="Statistics">
+        <Statistics good={good} neutral={neutral} bad={bad} total={total} positivePercentage={this.countPositiveFeedbackPercentage()}></Statistics>
+        </Section>
         </FeedbackCard>
     );
   }
 };
-
-  // updateGoodValue = () => {
-  //   this.setState(
-  //     prevState => {
-  //      return {
-  //       good: prevState.good + 1,
-  //      }
-  //     }
-  //   )
-  // }
-
-  // updateNeutralValue = () => {
-  //   this.setState(
-  //     prevState => {
-  //      return {
-  //       neutral: prevState.neutral + 1,
-  //      }
-  //     }
-  //   )
-  // }
-
-  // updateBadValue = () => {
-  //   this.setState(
-  //     prevState => {
-  //      return {
-  //       bad: prevState.bad + 1,
-  //      }
-  //     }
-  //   )
-  // }

@@ -1,5 +1,3 @@
-import { Headrest } from './Statistics-styled';
-
 export const Statistics = (
   {
     good,
@@ -11,7 +9,6 @@ export const Statistics = (
 ) => {
     return (
         <div>
-        <Headrest>Statistics</Headrest>
         <p>Good: {good}</p>
         <p>Neutral: {neutral}</p>
         <p>Bad: {bad}</p>

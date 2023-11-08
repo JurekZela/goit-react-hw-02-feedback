@@ -7,10 +7,6 @@ align-items: center;
 flex-direction: column;
 `;
 
-export const Headrest = styled.h2`
- font-size: 30px;
-`;
-
 export const Button = styled.button`
 border: 0;
 padding: 8px;
