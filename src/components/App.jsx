@@ -40,8 +40,8 @@ export class App extends Component{
          options={Object.keys(this.state)}
          onLeaveFeedback={this.onLeaveFeedback}></FeedbackOptions>
          </Section>
-        <Section title="Statistics">
-        <Statistics good={good} neutral={neutral} bad={bad} total={total} positivePercentage={this.countPositiveFeedbackPercentage()}></Statistics>
+         <Section title="Statistics">
+           <Statistics good={good} neutral={neutral} bad={bad} total={total} positivePercentage={this.countPositiveFeedbackPercentage()}></Statistics>  
         </Section>
         </FeedbackCard>
     );
